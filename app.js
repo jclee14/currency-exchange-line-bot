@@ -2,7 +2,7 @@ const Koa = require('koa');
 const Router = require('koa-router');
 const bodyParser = require('koa-bodyparser');
 const request = require('request');
-//require('dotenv').config()
+require('dotenv').config()
 
 const app = new Koa();
 const router = new Router();
@@ -94,7 +94,7 @@ function currencyConverter(msg) {
 function reply(reply_token, msg) {
     let headers = {
         'Content-Type': 'application/json',
-        'Authorization': 'Bearer {L3y3zPqSlyxfppwDcY0EKvVwNXBaTiJwUxlVpu0OGseqfEM8ynCHp+RnjBvJfcJPh3ShUPg8AHTTTHAOi7QDftQQ8kG9Wzj8CNoZm5hEi6SOAG/lxBT3OjuK/RJOQgfSNDVWcKO11obK4YkBCzjGrQdB04t89/1O/w1cDnyilFU=}'
+        'Authorization': `Bearer {${process.env.CHANNEL_TOKEN}}`
     }
     let body = JSON.stringify({
         replyToken: reply_token,
