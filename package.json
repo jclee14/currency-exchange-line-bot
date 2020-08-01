@@ -12,6 +12,7 @@
     "dotenv": "^8.2.0",
     "koa": "^2.13.0",
     "koa-bodyparser": "^4.3.0",
-    "koa-router": "^9.1.0"
+    "koa-router": "^9.1.0",
+    "request": "^2.88.2"
   }
 }
